@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medication Reminder</title>
+      <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+  
+    <header>
+        <h1 style="margin: 0;">Medication Reminder</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#medicine-info">Medicine Info</a></li>
+                <!-- Add more navigation items as needed -->
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <!-- User details will be displayed here -->
+         <h2>hello {{naming}}, Your health our responsibility</h2>
+    </section>
+
+    <section id="medicine-info">
+        <h2>Medicine Information</h2>
+        <form>
+            <label for="searchMedicine">Search for Medicine:</label>
+            <input type="text" id="searchMedicine" name="searchMedicine" placeholder="Enter medicine name">
+            <button type="button" onclick="searchMedicineInfo()">Search</button>
+        </form>
+
+        <div id="medicineInfo">
+            <!-- Medicine information will be displayed here -->
+        </div>
+    </section>
+
+    <section>
+        <form id="medicationForm">
+            <div style="margin-bottom:10px">
+            <label for="medicine">Medicine:</label>
+            <input type="text" id="medicine" name="medicine" required>
+            <br/>
+            </div>
+<!-- Remove the date input -->
+<!-- <label for="date">Date:</label>
+<input type="date" id="date" name="date" required> -->
+
+<!-- Add checkboxes for each day of the week -->
+<label for="days">Select Days:</label>
+<div id="days">
+    <input type="checkbox" id="day-mon" name="day-mon" value="Monday">
+    <label for="day-mon">Mon</label>
+
+    <input type="checkbox" id="day-tue" name="day-tue" value="Tuesday">
+    <label for="day-tue">Tue</label>
+
+    <input type="checkbox" id="day-wed" name="day-wed" value="Wednesday">
+    <label for="day-wed">Wed</label>
+
+    <input type="checkbox" id="day-thu" name="day-thu" value="Thursday">
+    <label for="day-thu">Thu</label>
+
+    <input type="checkbox" id="day-fri" name="day-fri" value="Friday">
+    <label for="day-fri">Fri</label>
+
+    <input type="checkbox" id="day-sat" name="day-sat" value="Saturday">
+    <label for="day-sat">Sat</label>
+
+    <input type="checkbox" id="day-sun" name="day-sun" value="Sunday">
+    <label for="day-sun">Sun</label>
+</div>
+<div style="margin-top:10px">
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required>
+
+</div>
+            <button type="button" onclick="addMedication()">Add Medication</button>
+        </form>
+ </section>
+ 
+       <!-- Add this section to display medication table -->
+<section id="medication-section">
+    <h2>Your Medications</h2>
+    <table id="userMedicationTable">
+        <thead>
+            <tr>
+                <th>Medicine</th>
+                <th>Time</th>
+                <th>Days</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Medication data will be inserted here dynamically -->
+        </tbody>
+    </table>
+</section>
+
+
+    <section id="history">
+        <h2>Medication History</h2>
+        <ul id="historyList">
+            <!-- Medication history will be inserted here dynamically -->
+        </ul>
+    </section>
+<!-- Include your main.js file -->
+<script src="/js/med1.js" defer></script>
+
+</body>
+</html>
